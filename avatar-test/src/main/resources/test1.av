@@ -1,0 +1,3 @@
+a=decimal(a);
+b=decimal(b);
+a-b
