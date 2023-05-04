@@ -11,6 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -56,9 +57,10 @@ public class FileHandleController {
         try {
             MultipartFile file = files[0];
             InputStream inputStream = file.getInputStream();
-            List<Object> objects = EasyExcel.read(inputStream, new NoModelDataListener()).sheet().doReadSync();
+            List<Object> objects1 = EasyExcel.read(inputStream).sheet().doReadSync();
+//            List<Object> objects = EasyExcel.read(inputStream, new NoModelDataListener()).sheet().doReadSync();
 
-            return objects.toString();
+            return objects1.toString();
         } catch (Exception e) {
             e.printStackTrace();
             return "fail";
@@ -85,7 +87,7 @@ public class FileHandleController {
 
 
             response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
-            response.setCharacterEncoding("utf-8");
+//            response.setCharacterEncoding("utf-8");
             // 这里URLEncoder.encode可以防止中文乱码 当然和easyexcel没有关系
             String fileName = URLEncoder.encode("测试", "UTF-8").replaceAll("\\+", "%20");
             response.setHeader("Content-disposition", "attachment;filename*=utf-8''" + fileName + ".xlsx");
