@@ -1,3 +1,6 @@
+a=1M;
+b=1231M;
+
 a=decimal(a);
 b=decimal(b);
-a-b
+return a + b;
