@@ -1,6 +1,4 @@
 a=1M;
 b=1231M;
 
-a=decimal(a);
-b=decimal(b);
-return a + b;
+return math.round(623.123) / 100M;
