@@ -1,4 +1,4 @@
-a=decimal(a);
-b=decimal(b);
-##a=math.round(a);
-return  a/5;
+a=1M;
+b=1231M;
+
+return math.round(623.123) / 100M;
