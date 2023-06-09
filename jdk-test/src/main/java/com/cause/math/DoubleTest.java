@@ -21,5 +21,10 @@ public class DoubleTest {
         BigDecimal bigDecimal = new BigDecimal("0.3");
         BigDecimal bigDecimal2 = new BigDecimal("0.1");
         System.out.println(bigDecimal.subtract(bigDecimal2));
+
+        double i = 300;
+        double h = i / 100;
+        System.out.println(h);
+        System.out.println(Math.ceil(i));
     }
 }

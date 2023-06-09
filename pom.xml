@@ -11,6 +11,7 @@
     <modules>
         <module>jdk-test</module>
         <module>avatar-test</module>
+        <module>antlr4</module>
     </modules>
 
     <properties>

@@ -1,3 +1,4 @@
 a=decimal(a);
 b=decimal(b);
-a-b
+##a=math.round(a);
+return  a/5;

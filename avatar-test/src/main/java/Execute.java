@@ -18,7 +18,7 @@ public class Execute {
             Expression expression = evaluatorInstance.compileScript("test1.av", false);
 
             Map map = new HashMap<String, Object>();
-            map.put("a", 0.3);
+            map.put("a", 2);
             map.put("b", 0.1);
             Object execute = expression.execute(map);
             System.out.println(execute.toString());
