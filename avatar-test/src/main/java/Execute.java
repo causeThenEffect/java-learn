@@ -15,11 +15,15 @@ public class Execute {
         try {
             AviatorEvaluatorInstance evaluatorInstance = AviatorEvaluator.getInstance();
 //            evaluatorInstance.setOption(Options.ALWAYS_PARSE_FLOATING_POINT_NUMBER_INTO_DECIMAL, true);
+            evaluatorInstance.addInstanceFunctions("bbb", BigDecimal.class);
+            evaluatorInstance.addInstanceFunctions("s", String.class);
+            evaluatorInstance.addFunction(new Test());
             Expression expression = evaluatorInstance.compileScript("test1.av", false);
 
             Map map = new HashMap<String, Object>();
-            map.put("a", 0.3);
-            map.put("b", 0.1);
+            map.put("a", -9.4);
+            map.put("b", -9.5);
+            map.put("c", -9.6);
             Object execute = expression.execute(map);
             System.out.println(execute.toString());
         } catch (Exception e) {

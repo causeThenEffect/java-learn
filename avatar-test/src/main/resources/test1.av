@@ -1,4 +1,3 @@
-a=1M;
-b=1231M;
+let c = -9.5M;
 
-return math.round(623.123) / 100M;
+return test1((-9.5 + 2), 'ROUND_HALF_UP');
