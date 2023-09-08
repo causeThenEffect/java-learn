@@ -45,11 +45,11 @@ public class TaskConfig {
         return executor;
     }
 
-    @Bean(AbstractApplicationContext.APPLICATION_EVENT_MULTICASTER_BEAN_NAME)
-    public SimpleApplicationEventMulticaster myEventMulticaster() {
-        SimpleApplicationEventMulticaster simpleApplicationEventMulticaster = new SimpleApplicationEventMulticaster();
-        simpleApplicationEventMulticaster.setTaskExecutor(myExecutor());
-        return simpleApplicationEventMulticaster;
-    }
+//    @Bean(AbstractApplicationContext.APPLICATION_EVENT_MULTICASTER_BEAN_NAME)
+//    public SimpleApplicationEventMulticaster myEventMulticaster() {
+//        SimpleApplicationEventMulticaster simpleApplicationEventMulticaster = new SimpleApplicationEventMulticaster();
+//        simpleApplicationEventMulticaster.setTaskExecutor(myExecutor());
+//        return simpleApplicationEventMulticaster;
+//    }
 
 }
