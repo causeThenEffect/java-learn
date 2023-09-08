@@ -12,6 +12,8 @@
         <module>jdk-test</module>
         <module>avatar-test</module>
         <module>antlr4</module>
+        <module>event-bus</module>
+        <module>spring-event</module>
     </modules>
 
     <properties>
