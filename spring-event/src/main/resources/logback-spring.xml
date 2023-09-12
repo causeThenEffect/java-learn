@@ -49,7 +49,7 @@
     <!-- name属性为必选，指定要配置的包或类，level和additivity为可选，有缺省值 -->
     <!-- level表示日志级别，这里配置info级别，表示info及以上级别的日志被输出 -->
     <!-- additivity表示日志是否传递到上一级，默认为true -->
-    <logger name="com.cause.plugin.mapper" level="info" additivity="false">
+    <logger name="com.cause.event" level="info" additivity="true">
         <appender-ref ref="console"/>
     </logger>
 
